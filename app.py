@@ -24,12 +24,13 @@ app = dash.Dash(__name__, external_stylesheets=[
     dbc.themes.BOOTSTRAP,
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.js"
 ], suppress_callback_exceptions=True)
+server = app.server
 app.title = "Recruitment Analytics Dashboard"
 
 # Fix for large file uploads
 app.server.config['MAX_CONTENT_LENGTH'] = 200 * 1024 * 1024  # 200MB limit
 app.server.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-server = app.server
+
 
 # Custom CSS with modern design
 app.index_string = '''
