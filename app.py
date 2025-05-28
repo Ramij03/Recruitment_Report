@@ -30,8 +30,6 @@ app.title = "Recruitment Analytics Dashboard"
 app.server.config['MAX_CONTENT_LENGTH'] = 200 * 1024 * 1024  # 200MB limit
 app.server.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
-server = app.server
-
 
 # Custom CSS with modern design
 app.index_string = '''
@@ -6391,3 +6389,5 @@ def show_comparison_stage_modal(button_clicks, comparison_candidates_data):
         )    
 if __name__ == '__main__':
   app.run(debug=True, port=8052)
+
+server = app.server
